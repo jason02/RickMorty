@@ -1,0 +1,55 @@
+<div class="card">
+   <img class="card-img-top"  (click)="showInfo(content, item)" [src]="item.image" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"> {{ item.name }}</h5>
+    <p class="card-text"> <label>Estatus: </label>  {{ item.status }}</p>
+    <p class="card-text"> <label>Especie: </label> {{ item.species }} </p>
+    <p class="card-text"> <label>Primer episodio:</label> {{ item.first_episode }}</p>
+    <p (click)="showInfoLocation(contentLocation, item)" class="card-text"> <label> última ubicación: </label> <label id="link"> &nbsp; {{ item.last_location }} </label></p>
+  </div>
+</div>
+
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title"> {{currentItem.name}} </h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+
+    <p>Información</p>
+    <p>Estado:  {{currentItem.status}}  </p>
+    <p>Especie: {{currentItem.species}}  </p>
+    <p>Tipo: {{currentItem.type}}  </p>
+    <p>Primer episodio: {{currentItem.first_episode}}  </p>
+    <p>última úbicación: {{currentItem.last_location}}  </p>
+    <p>Genero: {{currentItem.gender}}  </p>
+    <p>Origen: {{currentItem.origin}}  </p>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="d('Cerrar')">Cerrar</button>
+  </div>
+</ng-template>
+
+
+<ng-template #contentLocation let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title"> {{locationUrl.name}} </h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+
+    <p>Información</p>
+
+    <p>Tipo: {{locationUrl.type}}  </p>
+    <p>Dimensión: {{locationUrl.dimension}}  </p>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="d('Cerrar')">Cerrar</button>
+  </div>
+</ng-template>
+
+

@@ -1,0 +1,33 @@
+.card-img,
+.card-img-top {
+  border-radius: 50%;
+}
+
+.card {
+  width: 18rem;
+  margin-top: 2%;
+  margin-right: 2%;
+  border-radius: 1.25rem;
+  background: linear-gradient(70deg, #1e1d45, #511457);
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-title {
+  color: #03acc4;
+}
+
+label {
+  color: #03acc4;
+}
+
+p {
+  color: #68d053;
+}
+
+#link {
+  color: #68d053;
+  text-decoration: underline;
+}
