@@ -5,7 +5,6 @@ import { HttpClientModule  } from '@angular/common/http';
 
 describe('CardComponent', () => {
   let component: CardComponent;
-  let restService: RestService;
   let fixture: ComponentFixture<CardComponent>;
 
   beforeEach(async () => {
